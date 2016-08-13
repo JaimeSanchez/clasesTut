@@ -17,16 +17,23 @@ namespace clasesTut
         }
 
         //propiedades de la clase de tipo publico para poder accesar a ellas
-        public string Nombre;
-        public decimal SueldoDiario;
-        public int edad;
+        private string _Nombre;     
+
+        //accesor de propiedad--encapsulamiento
+        public string Nombre
+        {
+            get{ return _Nombre; }
+            set{ _Nombre = value;}
+        }
+
+        public decimal SueldoDiario { get; set; }
+        public int edad { get; set; }
 
         //metodos de la clase
         //metodo para calcular los dias de salario
         public decimal CalculaSalario(int NumeroDias)
         {
             return SueldoDiario * NumeroDias;
-
         }
 
     }
